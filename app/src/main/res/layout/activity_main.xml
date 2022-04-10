@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#292723">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:fontFamily="@font/nunito_sans_semibold"
+        android:text="@string/title"
+        android:textSize="64sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="#FFAF00"/>
+
+    <TextView
+        android:id="@+id/counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:hint="1/100"
+        android:textColorHint="#FFAF00"
+        android:textColor="#FFAF00"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/question"
+        app:layout_constraintEnd_toEndOf="@id/question" />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="351dp"
+        android:layout_height="108dp"
+        android:fontFamily="@font/open_sans"
+        android:gravity="center"
+        android:textColor="#FFAF00"
+        android:textSize="16sp"
+        android:hint="hello this is where you're going to put your question"
+        android:textColorHint="#FFAF00"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintVertical_bias=".2" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/question"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias=".2">
+
+        <ImageButton
+            android:id="@+id/previous_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:backgroundTint="#0F0F0D"
+            app:srcCompat="@android:drawable/ic_media_previous"
+            android:layout_margin="5dp"
+            android:contentDescription="back"/>
+
+        <Button
+            android:id="@+id/true_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="#0F0F0D"
+            android:fontFamily="@font/open_sans"
+            android:text="@string/txt_true"
+            android:textColor="#FFAF00" />
+
+        <Button
+            android:id="@+id/false_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_false"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:backgroundTint="#0F0F0D"
+            android:fontFamily="@font/open_sans"
+            android:textColor="#FFAF00"/>
+
+        <ImageButton
+            android:id="@+id/next_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@android:drawable/ic_media_next"
+            android:layout_margin="5dp"
+            android:contentDescription="next"
+            app:backgroundTint="#0F0F0D"/>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
